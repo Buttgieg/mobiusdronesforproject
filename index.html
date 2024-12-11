@@ -206,11 +206,7 @@ As per federal rules outlined in the Federal Acquisition Regulation (FAR), speci
         <p>U.S. Department of Transportation, 1200 New Jersey Avenue SE, Washington, D.C. 20590</p>
     </div>
 
-   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    // Initialize EmailJS
-    emailjs.init('LHMj8xX2T-A5f6j62'); // Replace with your public key
-
+  <script>
     // Form submission handler
     document.getElementById('proposalForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
@@ -222,34 +218,21 @@ As per federal rules outlined in the Federal Acquisition Regulation (FAR), speci
         let interest = document.getElementById('interest').value;
         let amount = document.getElementById('amount').value;
         let timeline = document.getElementById('timeline').value;
-        let question = document.getElementById('question').value;
 
-        // Create the data object to send via EmailJS
-        let emailParams = {
-            full_name: fullName,
-            email: email,
-            company_name: companyName,
-            interest: interest,
-            amount: amount,
-            timeline: timeline,
-            question: question,
-        };
+        // Collect uploaded files
+        let businessDocs = document.getElementById('businessDocs').files[0];
 
-        // Send email using EmailJS
-        emailjs.send('service_xhsuyqv', 'template_1f0y4ua', emailParams)
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Form submitted successfully!');
-                document.getElementById('proposalForm').reset(); // Clear the form
-            }, function (error) {
-                console.error('FAILED...', error);
-                alert('An error occurred while submitting the form. Please try again later.');
-            });
+        // Validate required fields
+        if (!fullName || !email || !companyName || !interest || !amount || !timeline || !businessDocs) {
+            alert("Please complete all fields and upload all required documents.");
+            return;
+        }
 
-        // Optionally, redirect to another page after submission
-        window.location.href = "index2.html"; // Replace with the actual URL of the next page
+        // Redirect to the next page without alert
+        window.location.href = "../dot/index2.html";
     });
 </script>
+
 
 
 </body>
